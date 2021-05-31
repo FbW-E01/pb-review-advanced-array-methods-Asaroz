@@ -34,6 +34,7 @@ console.log(obj_array.sort((a,b)=>{
 return a.number.match(/\d+/g).join([])-b.number.match(/\d+/g).join([])
 }))
 console.log("________________________________")
+
 // 6. Sort the array based on the "number" property, with the highest number first.
 console.log(obj_array.sort((a,b)=>{
     return b.number.match(/\d+/g).join([])-a.number.match(/\d+/g).join([])
@@ -43,8 +44,7 @@ console.log(obj_array.sort((a,b)=>{
 // 7. Based on the array, create a string with all of the names of the people in the 
 // array separated by a comma and then replace the last comma with the string `" and "`.
 
-const name_string = obj_array.reduce((accu,current)=>{
-    
-    console.log(accu.name)
+const name_string = obj_array.reduce((accu="",current)=>{
+    console.log(accu)
     return accu+"   ,   "+current.name})
-console.log(name_string.replace(/,(?=[^,]*$)/, ' and'))
+console.log(name_string.replace(/,(?=[^,]*$)/, '     and    '))
